@@ -34,12 +34,11 @@ public class RedCliente {
     }
 
     public void enviarMensaje(byte[] mensaje) throws IOException {
-        System.out.println(new String(mensaje));
-//        byte[] hoja = new String(mensaje).getBytes();
-//
-//        DatagramPacket sobre = new DatagramPacket(hoja, hoja.length, destino, puerto);
-//
-//        socket.send(sobre);
+        byte[] hoja = new String(mensaje).getBytes();
+
+        DatagramPacket sobre = new DatagramPacket(hoja, hoja.length, destino, puerto);
+
+        socket.send(sobre);
     }
 
     public byte[] recibirMensaje() throws IOException {

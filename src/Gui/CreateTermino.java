@@ -106,6 +106,7 @@ public class CreateTermino extends javax.swing.JDialog {
         String description = txtFieldDefinicion.getText();
         
         JSONObject obj=new JSONObject();
+        obj.put("action", "create");
         obj.put("name", name);
         obj.put("description", description);
         

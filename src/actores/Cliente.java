@@ -44,7 +44,7 @@ public class Cliente {
     
     public String procesar(JSONObject mensaje){        
         try {
-            byte[] respuesta = redCliente.trabajar(mensaje.toString().getBytes("UTF-8"));            
+            byte[] respuesta = redCliente.trabajar(mensaje.toString().getBytes("UTF-8"));       
             return new String(respuesta);
         } catch (IOException ex) {
             System.out.println("<<No se pudo enviar el mensaje: " + ex.getMessage());
